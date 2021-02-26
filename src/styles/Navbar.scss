@@ -1,0 +1,133 @@
+@import "./variables";
+
+.NavbarContainer {
+	box-shadow: 0px 3px 6px #0000000f;
+
+	.Navbar {
+		.Navbar__logoContainer {
+			padding: 0;
+
+			.Navbar__logo {
+				max-width: 66px;
+				margin: 0;
+			}
+		}
+
+		.Navbar__items {
+			.Navbar__itemsList {
+				margin-left: auto;
+
+				.nav-item {
+					margin-bottom: 14px;
+
+					.dropdown-menu {
+						border-color: $color-dropdown-border;
+
+						.dropdown-menu-arrow {
+							top: -25px;
+							left: 50%;
+							width: 0;
+							height: 0;
+							position: relative;
+						}
+
+						.dropdown-menu-arrow:before,
+						.dropdown-menu-arrow:after {
+							content: "";
+							position: absolute;
+							display: block;
+							width: 0;
+							height: 0;
+							border-width: 7px 8px;
+							border-style: solid;
+							border-color: transparent;
+							z-index: -1;
+						}
+
+						.dropdown-menu-arrow:after {
+							bottom: -18px;
+							right: -8px;
+							border-bottom-color: $color-white;
+						}
+
+						.dropdown-menu-arrow:before {
+							bottom: -17px;
+							right: -8px;
+							border-bottom-color: $color-dropdown-border;
+						}
+					}
+
+					.nav-link {
+						text-align: center;
+						letter-spacing: 0.49px;
+						font-size: 16px;
+						color: $color-black;
+						font-weight: 400;
+
+						&:hover {
+							cursor: pointer;
+						}
+
+						img {
+							width: 32px;
+						}
+					}
+					.signUp {
+						color: $color-green;
+					}
+
+					.login {
+						border-radius: 100px;
+						padding: 8px 41px !important;
+						background-color: $color-green;
+						color: $color-white;
+						transition: 0.2s ease-in-out;
+
+						&:hover {
+							padding: 9px 44px !important;
+						}
+					}
+
+					.signUp,
+					.login {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.NavbarContainer {
+		.Navbar {
+			padding: 2px 0;
+
+			.Navbar__items {
+				.Navbar__itemsList {
+					.nav-item {
+						margin-left: 30px;
+						margin-bottom: 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.NavbarContainer {
+		.Navbar {
+			.Navbar__items {
+				.Navbar__itemsList {
+					.nav-item {
+						margin-left: 46px;
+					}
+				}
+			}
+		}
+	}
+}
